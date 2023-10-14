@@ -17,6 +17,7 @@ public interface RecruitmentPostService {
 
   List<RecruitmentPostListResponseDto> getAllRecruitmentPost();
 
+  List<RecruitmentPostResponseDto> getSearchRecruitmentPost(String keyword);
   RecruitmentPostDetailResponseDto getRecruitmentPost(Long recruitmentPostId);
 
   RecruitmentPost findRecruitmentPost(Long id);

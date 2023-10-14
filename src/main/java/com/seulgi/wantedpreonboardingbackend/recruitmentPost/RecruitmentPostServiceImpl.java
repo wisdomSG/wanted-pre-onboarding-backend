@@ -6,6 +6,7 @@ import com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto.RecruitmentPost
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto.RecruitmentPostListResponseDto;
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto.RecruitmentPostRequestDto;
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto.RecruitmentPostResponseDto;
+import com.seulgi.wantedpreonboardingbackend.recruitmentPost.repository.RecruitmentPostRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -58,6 +59,14 @@ public class RecruitmentPostServiceImpl implements RecruitmentPostService{
     return recruitmentPostRepository.findAll()
         .stream()
         .map(RecruitmentPostListResponseDto::new)
+        .collect(Collectors.toList());
+  }
+
+  @Override
+  public List<RecruitmentPostResponseDto> getSearchRecruitmentPost(String keyword) {
+    return recruitmentPostRepository.searchRecruitmentPost(keyword)
+        .stream()
+        .map(RecruitmentPostResponseDto::new)
         .collect(Collectors.toList());
   }
 
