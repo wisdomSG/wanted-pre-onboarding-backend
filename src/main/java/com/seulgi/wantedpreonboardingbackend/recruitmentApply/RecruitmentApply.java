@@ -1,4 +1,4 @@
-package com.seulgi.wantedpreonboardingbackend.applyList;
+package com.seulgi.wantedpreonboardingbackend.recruitmentApply;
 
 import com.seulgi.wantedpreonboardingbackend.common.User;
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.RecruitmentPost;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class PostApply {
+public class RecruitmentApply {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
