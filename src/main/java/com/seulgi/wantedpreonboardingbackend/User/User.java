@@ -1,4 +1,4 @@
-package com.seulgi.wantedpreonboardingbackend.common;
+package com.seulgi.wantedpreonboardingbackend.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
