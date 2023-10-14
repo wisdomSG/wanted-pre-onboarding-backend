@@ -1,6 +1,6 @@
 package com.seulgi.wantedpreonboardingbackend.recruitmentApply;
 
-import com.seulgi.wantedpreonboardingbackend.common.User;
+import com.seulgi.wantedpreonboardingbackend.User.User;
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.RecruitmentPost;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,4 +28,8 @@ public class RecruitmentApply {
   @JoinColumn(name = "recruitment_post_id")
   private RecruitmentPost recruitmentPost;
 
+  public RecruitmentApply(User user, RecruitmentPost recruitmentPost) {
+    this.user = user;
+    this.recruitmentPost = recruitmentPost;
+  }
 }

@@ -73,6 +73,7 @@ public class RecruitmentPostServiceImpl implements RecruitmentPostService{
     return new RecruitmentPostDetailResponseDto(recruitmentPost, otherRecuritList);
   }
 
+  @Override
   public RecruitmentPost findRecruitmentPost(Long id) {
     return recruitmentPostRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("채용공고를 찾을 수 없습니다."));
   }

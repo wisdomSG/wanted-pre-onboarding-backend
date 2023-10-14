@@ -19,4 +19,5 @@ public interface RecruitmentPostService {
 
   RecruitmentPostDetailResponseDto getRecruitmentPost(Long recruitmentPostId);
 
+  RecruitmentPost findRecruitmentPost(Long id);
 }
