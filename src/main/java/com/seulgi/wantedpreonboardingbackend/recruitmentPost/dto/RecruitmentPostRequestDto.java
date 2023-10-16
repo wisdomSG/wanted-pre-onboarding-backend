@@ -9,5 +9,4 @@ public class RecruitmentPostRequestDto {
   private Long reward;
   private String content;
   private String skills;
-
 }

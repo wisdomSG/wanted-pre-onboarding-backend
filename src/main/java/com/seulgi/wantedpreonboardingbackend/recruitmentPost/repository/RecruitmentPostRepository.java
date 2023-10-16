@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RecruitmentPostRepository extends JpaRepository<RecruitmentPost, Long>, RecruitmentPostRepositoryQuery {
-
   List<RecruitmentPost> findAllByCompany(Company company);
 }

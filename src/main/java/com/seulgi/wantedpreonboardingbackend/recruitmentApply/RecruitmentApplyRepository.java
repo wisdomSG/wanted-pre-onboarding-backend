@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RecruitmentApplyRepository extends JpaRepository<RecruitmentApply, Long> {
-
   Optional<RecruitmentApply> findByUserAndRecruitmentPost(User user, RecruitmentPost recruitmentPost);
 }

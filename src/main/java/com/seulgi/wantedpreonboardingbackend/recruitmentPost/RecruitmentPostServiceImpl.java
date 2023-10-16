@@ -21,7 +21,7 @@ public class RecruitmentPostServiceImpl implements RecruitmentPostService{
   private final CompanyService companyService;
   @Override
   public RecruitmentPostResponseDto createRecruitmentPost(RecruitmentPostRequestDto requestDto) {
-    Company company = companyService.getCompany(requestDto.getCompanyId());
+    Company company = companyService.findCompany(requestDto.getCompanyId());
     RecruitmentPost recruitmentPost = new RecruitmentPost(requestDto, company);
 
     recruitmentPostRepository.save(recruitmentPost);
@@ -73,7 +73,7 @@ public class RecruitmentPostServiceImpl implements RecruitmentPostService{
   @Override
   public RecruitmentPostDetailResponseDto getRecruitmentPost(Long recruitmentPostId) {
     RecruitmentPost recruitmentPost = findRecruitmentPost(recruitmentPostId);
-    Company company = companyService.getCompany(recruitmentPost.getCompany().getId());
+    Company company = companyService.findCompany(recruitmentPost.getCompany().getId());
     List<Long> otherRecuritList= recruitmentPostRepository
         .findAllByCompany(company)
         .stream()

@@ -6,9 +6,7 @@ import java.util.List;
 public class RecruitmentPostDetailResponseDto {
   private Long id;
   private String  companyName;
-
   private String country;
-
   private String region;
   private String position;
   private Long reward;

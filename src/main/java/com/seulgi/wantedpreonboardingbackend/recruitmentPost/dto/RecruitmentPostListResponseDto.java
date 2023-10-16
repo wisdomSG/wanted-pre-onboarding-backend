@@ -1,14 +1,14 @@
 package com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto;
 
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.RecruitmentPost;
-import java.util.List;
+import lombok.Getter;
 
+@Getter
 public class RecruitmentPostListResponseDto {
+
   private Long id;
   private String  companyName;
-
   private String country;
-
   private String region;
   private String position;
   private Long reward;

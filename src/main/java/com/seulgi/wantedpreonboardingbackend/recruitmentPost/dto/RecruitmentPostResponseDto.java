@@ -1,7 +1,9 @@
 package com.seulgi.wantedpreonboardingbackend.recruitmentPost.dto;
 
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.RecruitmentPost;
+import lombok.Getter;
 
+@Getter
 public class RecruitmentPostResponseDto {
 
   private Long id;

@@ -2,18 +2,14 @@ package com.seulgi.wantedpreonboardingbackend.recruitmentApply;
 
 import com.seulgi.wantedpreonboardingbackend.User.User;
 import com.seulgi.wantedpreonboardingbackend.recruitmentPost.RecruitmentPost;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
 @Getter
+@Table(name = "recruitment_applies")
 public class RecruitmentApply {
 
   @Id
